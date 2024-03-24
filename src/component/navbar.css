@@ -98,7 +98,7 @@ background-clip: text;
   color: #fff;
   transition: 0.5s;
 }
-.menu-link ul li:hover > a {
+.menu-link ul li:hover > a,.menu-link button:hover {
   transform-origin: left;
   color: rgb(228, 61, 105);
   text-decoration: underline;
@@ -129,6 +129,32 @@ background-clip: text;
 .youtube {
   color: #ff0000;
 }
+
+.menu-link button{
+  background: none;
+  position:relative;
+  color: #fff;
+  border: none;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.menu-link .dropdown-menu {
+  display: block;
+  /* color: #2c2b2b; */
+  position: absolute;
+  align-content: center;
+  z-index: 1000;
+  background:#b5b5b6;
+  border: 5px #111;
+  border-radius: 5%;
+  max-width:100%;
+}
+.menu-link .dropdown-menu a{
+  color: #111;
+  margin: 5px;
+}
+
 
 
 /* responsive css style  */

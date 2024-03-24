@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
 import { FaFacebookSquare,FaInstagramSquare,FaYoutubeSquare } from 'react-icons/fa';
+import { IoMdArrowDropdown } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import './navbar.css';
 
 const Navbar = () => {
   const [showMediaIcons,setShowMediaIcons]=useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to toggle the dropdown open/close state
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleItemClick = (item) => {
+    console.log("Selected item:", item);
+   
+    setIsOpen(false);
+  };
+
+
   return (
     <>
       <nav className="main-nav">
@@ -21,6 +37,20 @@ const Navbar = () => {
             </li>
             <li>
               <a href="#">Services</a>
+            </li>
+            <li>
+              <button className="dropdown-toggle" onClick={toggleDropdown}>
+                More<IoMdArrowDropdown />
+              </button>
+              {/* Dropdown menu items */}
+              {isOpen && (
+                <ul className="dropdown-menu">
+                  <li onClick={() => handleItemClick("Item 1")}><a href="#">Service1</a></li>
+                  <li onClick={() => handleItemClick("Item 2")}><a href="#">Service2</a></li>
+                  <li onClick={() => handleItemClick("Item 3")}><a href="#">Service3</a></li>
+                  {/* Add more items as needed */}
+                </ul>
+                )}
             </li>
             <li>
               <a href="#">Contact</a>
