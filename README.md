@@ -1,4 +1,5 @@
-<img width="939" alt="Screenshot 2024-03-23 203539" src="https://github.com/Amit22012/Avataar-SDE/assets/97590162/b0069852-19c0-4aac-a309-add640a1bfd3">
+<img width="941" alt="image" src="https://github.com/Amit22012/Avataar-SDE/assets/97590162/bd41a3fc-be55-43c9-8da1-abac13eee701">
+
 
 
 # Getting Started with Create React App
